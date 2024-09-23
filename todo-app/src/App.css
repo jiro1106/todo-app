@@ -1,0 +1,179 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins',sans-serif;  
+    
+  }
+  
+  body {
+    background-image : url(https://i.pinimg.com/originals/52/9c/49/529c49e9164d33dd37bdc658d9a807f5.gif);
+    background-size: cover;
+    background-position: center center; /* Centers the GIF on the page */
+    background-attachment: fixed; /* Keeps the background fixed while scrolling */
+  }
+  .todo-app {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    width: 60rem;
+    min-height: 600px;
+    background:   rgba(255,255,255,.5);
+    text-align: center;
+    margin: 128px auto;
+    border-radius: 10px;
+    padding-bottom: 32px;
+  }
+  
+  .todo-app h1 {
+    margin: 2rem;
+    color: #000000;
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  p {
+    margin: 32px 0;
+    color: rgb(0, 0, 0);
+    font-size: 1.3rem;
+    font-weight: 400;
+  }
+  
+  .complete {
+    text-decoration: line-through;
+    opacity: 0.4;
+  }
+  
+  .todo-form {
+    margin-bottom: 32px;
+  }
+  
+  .todo-input {
+    padding: 14px 32px 14px 16px;
+    border-radius: 4px 0 0 4px;
+    border: 2px solid #dddddd;
+    border-radius:2px;
+    outline: none;
+    width: 320px;
+    background: transparent;
+    color: #000000;
+  }
+  
+  .todo-input::placeholder {
+    color: gray
+  }
+  
+  .todo-button {
+    padding: 16px;
+    margin-right:15px;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    outline: none;
+    background: #FF8343;
+    color: #fff;
+    text-transform: capitalize;
+  }
+  
+  .todo-input.edit {
+    border: 2px solid #dddddd;
+  }
+  
+  .todo-button.edit {
+    background: linear-gradient(
+      90deg,
+      #FF8343 100%,
+      #FF8343 100%
+    );
+    padding: 16px 22px;
+    
+    
+  }
+  
+  .todo-container {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+  }
+  
+  .todo-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0.5rem auto;
+    color: black;
+    background: linear-gradient(
+      90deg,
+      #dddddd 100%,
+      #dddddd 100%
+    );
+  
+    padding: 16px;
+    border-radius: 10px;
+    width: 90%;
+  }
+  
+  .todo-row:nth-child(2n + 1) {
+    background: linear-gradient(
+      90deg,
+      #e9d8b4 100%,
+      #b66c37 50%
+    );
+  }
+
+  .icons {
+    display: flex;
+    align-items: center; /* Center vertically */
+    gap: 5px; /* Space between buttons */
+}
+
+.icons button {
+    padding: 8px 20px;
+    font-size: 0.9rem;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    color: #fff;
+}
+
+.icons .complete-button {
+  background-color: rgb(65, 137, 24);
+}
+
+.icons .edit-button {
+  background-color: #FFB22C;
+}
+
+.icons .delete-button {
+  background-color: red;
+}
+
+.icons .edit-button:hover {
+  background-color: rgb(215, 148, 24);
+}
+
+.icons .delete-button:hover {
+  background-color: rgb(190, 35, 35);
+}
+.icons button:disabled {
+    background-color: #ccc; /* Grey color for disabled state */
+    cursor: not-allowed;
+}
+
+.icons .complete-button:hover:not(:disabled) {
+    background-color: #17d11a; /* Darker shade on hover */
+}
+
+
+.todo-button:hover {
+    background: linear-gradient(
+      90deg,
+      #CD5C08 0%,
+      #CD5C08 100%
+    );
+}
+
+.edit-icon:hover, .delete-icon:hover {
+    color: #ff6b6b; /* Light red to indicate delete or edit on hover */
+}
